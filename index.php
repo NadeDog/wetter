@@ -1,3 +1,6 @@
+<?php
+	require "crap.php";
+?>
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
 
@@ -18,23 +21,24 @@
 
 
                     <div class="content is-small">
-                        <span> Berlin,
+                        <span> <?=$location?>,
                         </span>
-                        <time datetime="1605675993"> Datum von heute
+                        <time datetime="1605675993"> <?=date("d.m.Y")?>
                         </time>
                     </div>
                     <div class="rel state">
-                        <img src='img/hc.svg' alt="Wetterzustand" width="200" title="Wetterzustand">
+                        <img src='img/<?=$state_0?>.svg' alt="Wetterzustand" width="250" title="Wetterzustand">
                         <p>
-                            <span class="min-temp"> 9° C
+                            <span class="min-temp"> <?=$min_temp_0?>° C
                             </span>
-                            <span class="max-temp"> 9° C
+                            <span class="max-temp"> <?=$max_temp_0?>° C
                             </span>
                         </p>
                     </div>
 
                     <div class="content is-large state">
-                        <p class="is-size-1 is-uppercase has-text-weight-bold"> Hier die Tagline
+                        <p class="is-size-1 is-uppercase has-text-weight-bold">
+							<?php tagline($state_0);?>
                         </p>
                     </div>
                 </div>
@@ -49,7 +53,7 @@
                     <div class="keen-slider__slide number-slide">
                         <h2 class="title">Wochentag</h2>
                         <div class="tile-img">
-                            <img src="img/c.svg" alt="">
+                            <img src="img/<?=$state_1?>.svg" alt="">
                         </div>
 
                         <p>
@@ -62,7 +66,7 @@
                     <div class="keen-slider__slide number-slide">
                         <h2 class="title">Wochentag</h2>
                         <div class="tile-img">
-                            <img src="img/h.svg" alt="">
+                            <img src="img/<?=$state_2?>.svg" alt="">
                         </div>
 
                         <p>
